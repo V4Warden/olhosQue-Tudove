@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# OLHOS DE DEUS – GUI Edition
-# By: V4Warden (expandido)
+# OLHOS DE DEUS – GUI Edition (Indentação Corrigida)
+# By: V4Warden
 
 import os, sys, json, time, random, string, asyncio, discord
 from discord.ext import commands
 import tkinter as tk
-from tkinter import filedialog, messageInfo
+from tkinter import filedialog, messagebox
 
 # ---------- BANNER ----------
 BANNER = r"""
@@ -32,7 +32,7 @@ BANNER = r"""
   @        @@@@@@@@        @
   @@       @@    @@      @@
     @@@@@@@        @@@@@@
- O L H O S   Q U E  T U D O...
+ O L H O S   D E   D E U S
          By: V4Warden
 """
 
@@ -133,7 +133,6 @@ async def nuke_server(guild_id: int):
 
 # ---------- FUNÇÕES NOVAS ----------
 async def spam_dm_fotos(user_id: int, legenda: str, pasta: str = "imgs"):
-    """Envia 50 fotos aleatórias da pasta 'imgs' com legenda para a DM."""
     try:
         user = await bot.fetch_user(user_id)
     except:
@@ -253,6 +252,7 @@ def gui_folder(title="Selecione a pasta"):
     path = filedialog.askdirectory(title=title)
     root.destroy()
     return path
+                                                                     #4W
 
 # ---------- PAINEL ----------
 async def terminal_panel():
@@ -274,6 +274,7 @@ async def terminal_panel():
         print("12 – Mudar ícone do servidor (GUI)")
         print("13 – Criar convite permanente")
         print("0 – Sair")
+
         opt = (await ainput("> ")).strip()
 
         if opt == "1":
@@ -344,47 +345,3 @@ if __name__ == "__main__":
         sys.exit(1)
     bot.run(sys.argv[1])
 
-        if opt == "1":
-            gid = int(await ainput("ID do servidor: "))
-            await clone_server(gid)
-
-        elif opt == "2":
-            uid = int(await ainput("ID do usuário: "))
-            txt = await ainput("Mensagem: ")
-            await spam_dm(uid, txt)
-
-        elif opt == "3":
-            gid = int(await ainput("ID do servidor: "))
-            await nuke_server(gid)
-
-        elif opt == "4":
-            cfg["nuke_msg"] = await ainput("Mensagem: ")
-            save_cfg()
-
-        elif opt == "5":
-            cfg["server_name"] = await ainput("Nome: ")
-            save_cfg()
-
-        elif opt == "6":
-            cfg["channel_name"] = await ainput("Nome base: ")
-            save_cfg()
-
-        elif opt == "7":
-            print(json.dumps(cfg, indent=2, ensure_ascii=False))
-            await ainput("\nEnter para continuar...")
-
-        elif opt == "0":
-            os._exit(0)
-#4W *
-        else:
-            print("Opção inválida.")
-            await asyncio.sleep(1)
-
-# ---------- START ----------
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(BANNER)
-        print("Uso: python bot.py <TOKEN>")
-        sys.exit(1)
-
-    bot.run(sys.argv[1])
