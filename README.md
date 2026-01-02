@@ -39,13 +39,16 @@ O foco do projeto é controle direto pelo terminal, sem comandos no chat.
 Clone o repositório:
 
 git clone https://github.com/V4Warden/olhosQue-Tudove.git
+
 cd olhosQue-Tudove
+
 Instale as dependências:
 
 pip install -U discord.py
+
 ▶️ Como executar
 Execute normalmente:
 python3 painel.py
-bash
+
 Copiar código
 python painel.py
