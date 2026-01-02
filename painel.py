@@ -2,12 +2,13 @@
 # -*- coding: utf-8 -*-
 # OLHOS DE DEUS – By: V4Warden *
 
+
 import os, sys, json, time, random, string, asyncio, discord
 from discord.ext import commands
 
 # ---------- BANNER ----------
 BANNER = r"""
-  @@@@                   
+        @@@@                   
       @@    @@@@@  @@@@ @@@@  
       @          @@@@ @@    @ 
       @          @ @@@@@@   @ 
@@ -185,7 +186,7 @@ async def terminal_panel():
 
         elif opt == "0":
             os._exit(0)
-
+#4W *
         else:
             print("Opção inválida.")
             await asyncio.sleep(1)
