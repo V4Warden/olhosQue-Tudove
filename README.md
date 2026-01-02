@@ -47,8 +47,8 @@ Instale as dependências:
 pip install -U discord.py
 
 ▶️ Como executar
-Execute normalmente:
+
 python3 painel.py
 
-Copiar código
+Caso esteja no windows! 
 python painel.py
