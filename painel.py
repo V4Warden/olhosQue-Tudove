@@ -32,7 +32,7 @@ BANNER = r"""
   @        @@@@@@@@        @
   @@       @@    @@      @@
     @@@@@@@        @@@@@@
- O L H O S   D E   D E U S
+        F O R   W I N
          By: V4Warden
 """
 
